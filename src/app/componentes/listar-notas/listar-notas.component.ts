@@ -163,8 +163,8 @@ export class ListarNotasComponent implements OnInit{
           this.obtenerCategorias();
           this.noteForm.reset();
           this.noteForm.reset();
-          UIkit.modal('#my-modal-note').hide()
           this.successNotification('Nota');
+          UIkit.modal('#my-modal-note').hide()
           this.hideLoader();
         },error => {
           console.log(error);
@@ -185,8 +185,9 @@ export class ListarNotasComponent implements OnInit{
           this.obtenerCategorias();
           this.noteForm.reset();
           this.noteForm.reset();
-          UIkit.modal('#my-modal-edit-note').hide()
           this.updateNotifications('Nota');
+          UIkit.modal('#my-modal-edit-note').hide()
+          this.editarIDNote = ''; //important
           this.hideLoader();
         }, error => {
           console.log(error);
@@ -211,8 +212,8 @@ export class ListarNotasComponent implements OnInit{
         this._categoriaService.registrarCategoria(CATEGORIA).subscribe(data => {
           this.obtenerCategorias();
           this.categoryForm.reset();
-          UIkit.modal('#my-modal-category').hide();
           this.successNotification('Categoria');
+          UIkit.modal('#my-modal-category').hide();
           this.hideLoader();
         }, error => {
           console.log(error);
@@ -230,8 +231,8 @@ export class ListarNotasComponent implements OnInit{
         this._categoriaService.actualizarCategoria(this.editarIDCategory, titulo).subscribe(data => {
           this.obtenerCategorias();
           this.categoryForm.reset();
-          UIkit.modal('#my-modal-edit-category').hide();
           this.updateNotifications('Categoria');
+          UIkit.modal('#my-modal-edit-category').hide();
           this.editarIDCategory = ''; //important
           this.hideLoader();
         }, error => {
