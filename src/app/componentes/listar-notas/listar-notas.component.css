@@ -75,3 +75,27 @@ h1 {
         font-size: 15px;
     }
 }
+
+.btn-disable {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: default;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    background-color: rgba(15, 117, 212, 0.3) !important;
+}
+
+.card-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card-icons i {
+    margin-left: 10px;
+}

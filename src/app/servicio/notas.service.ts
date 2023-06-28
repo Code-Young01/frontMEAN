@@ -13,6 +13,21 @@ export class NotasService {
 
   registrarNota(nota:Notas):Observable<any>{
     var urlAPI = this.url + '/registrar';
-    return this.http.post
+    return this.http.post(urlAPI, nota);
+  }
+
+  obtenerNotas(notas:any):Observable<any>{
+    var urlAPI = this.url + '/obtener-notas';
+    return this.http.post(urlAPI, notas);
+  }
+
+  actualizarNota(id:any, note:any){
+    var urlAPI = this.url + '/actualizar-nota/';
+    return this.http.put(urlAPI+id, note);
+  }
+
+  eliminarNota(id:any) {
+    var urlAPI = this.url + '/eliminar-nota/';
+    return this.http.delete(urlAPI + id);
   }
 }

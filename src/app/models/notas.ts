@@ -3,6 +3,7 @@ export class Notas{
     id_user: string;
     titulo: string;
     descripcion: string;
+    fecha?: Date;
     categoria: string;
 
     constructor(id_user: string, titulo:string, descripcion:string, categoria:string){
